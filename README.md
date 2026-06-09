@@ -1,8 +1,8 @@
 # KOPP Feinmechanik – Website (selbst-enthaltend, flach)
 
 Statische, mobil optimierte One-Page-Website. **CSS und JavaScript sind direkt in die
-HTML-Dateien eingebaut** – es gibt keine externen `style.css`/`main.js` mehr, die beim
-Hochladen verloren gehen oder einen falschen Pfad haben könnten. Einfach hochladen, fertig.
+HTML-Dateien eingebaut** – keine externen `style.css`/`main.js`, die beim Hochladen
+verloren gehen können. Einfach hochladen, fertig.
 
 ## Dateien (alle auf einer Ebene)
 
@@ -19,9 +19,9 @@ sitemap.xml
 
 ## Deployen / Hochladen
 
-GitHub Pages, Vercel, Netlify, IONOS, Cloudflare Pages: die Dateien einfach ins Root legen.
-Kein Build-Command, kein Output-Directory. Bei GitHub: ZIP entpacken → die Dateien
-(nicht die .zip) ins Repo hochladen → Commit. Pages zeigt die Seite dann gestylt an.
+GitHub Pages, Vercel, Netlify, IONOS, Cloudflare Pages: die Dateien ins Root legen.
+Kein Build-Command. Bei GitHub: ZIP entpacken → die Dateien (nicht die .zip) ins Repo
+hochladen → Commit. Danach ggf. Hard-Reload (⌘⇧R) gegen den Browser-Cache.
 
 ## Farben & Fonts
 
@@ -36,6 +36,7 @@ Kein Build-Command, kein Output-Directory. Bei GitHub: ZIP entpacken → die Dat
 2. **Bilder:** Fotos unter diesen Dateinamen daneben legen, dann erscheinen sie automatisch:
    `team.jpg`, `historie.jpg`, `fertigung.jpg`, `laser.jpg`, `reinigung.jpg`,
    `oberflaeche.jpg`, `qualitaet-1.jpg`, `qualitaet-2.jpg`.
+   (Ohne Fotos werden ruhige, helle Platzhalter angezeigt.)
 3. **Kontaktformular:** in `index.html` im `<script>`-Block die Konstante
    `WEB3FORMS_ACCESS_KEY` setzen (kostenloser Key über web3forms.com mit
    `kontakt@kopp-feinmechanik.de`). Ohne Key öffnet der Button ersatzweise das E-Mail-Programm.
