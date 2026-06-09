@@ -36,7 +36,7 @@ hochladen → Commit. Danach ggf. Hard-Reload (⌘⇧R) gegen den Browser-Cache.
 2. **Bilder:** Fotos unter diesen Dateinamen daneben legen, dann erscheinen sie automatisch:
    `team.jpg`, `historie.jpg`, `fertigung.jpg`, `laser.jpg`, `reinigung.jpg`,
    `oberflaeche.jpg`, `qualitaet-1.jpg`, `qualitaet-2.jpg`.
-   (Ohne Fotos werden ruhige, helle Platzhalter angezeigt.)
+   (Ohne Fotos werden ruhige, korrekt dimensionierte Platzhalter angezeigt.)
 3. **Kontaktformular:** in `index.html` im `<script>`-Block die Konstante
    `WEB3FORMS_ACCESS_KEY` setzen (kostenloser Key über web3forms.com mit
    `kontakt@kopp-feinmechanik.de`). Ohne Key öffnet der Button ersatzweise das E-Mail-Programm.
