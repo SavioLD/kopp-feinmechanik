@@ -1,45 +1,51 @@
-# KOPP Feinmechanik – Website (selbst-enthaltend, flach)
+# Steuerkanzlei Christoph Leichtle – Karriere-Landingpage
 
-Statische, mobil optimierte One-Page-Website. **CSS und JavaScript sind direkt in die
-HTML-Dateien eingebaut** – keine externen `style.css`/`main.js`, die beim Hochladen
-verloren gehen können. Einfach hochladen, fertig.
+Bewerbungs-Landingpage für Meta-Kampagnen. Zwei ausgeschriebene Stellen (Rottweil):
+- **Finanzbuchhaltung & Lohn** – Teilzeit
+- **Steuerfachwirt:in / Steuerfachangestellte:r für Jahresabschlüsse & Steuererklärungen** – Vollzeit
 
-## Dateien (alle auf einer Ebene)
+Erstellt von **Ländle Digital**.
 
-```
-index.html          ← Startseite (CSS + JS inline)
-impressum.html      ← Impressum (CSS inline)
-datenschutz.html    ← Datenschutzerklärung (CSS inline)
-logo.png            ← Original-Logo (bitte daneben legen, siehe unten)
-favicon.svg         ← optional (Favicon ist zusätzlich in den HTMLs eingebettet)
-robots.txt
-sitemap.xml
-```
+## Inhalt
 
-> Für eine funktionierende, gestylte Seite genügt schon allein die `index.html`.
+| Datei / Ordner | Beschreibung |
+|---|---|
+| `index.html` | **Die komplette Seite in einer Datei** – CSS **und** Schriften sind eingebettet. Keine weiteren Dateien nötig, deploy-fertig. |
+| `assets/og.png` | Social-Preview-Bild (Link-Vorschau) |
+| `assets/creatives/` | 3 Anzeigen-Creatives für Meta (4:5, 1080×1350 px, PNG) |
 
-## Logo
+> Diese `index.html` ist bewusst **self-contained**: Sie funktioniert überall –
+> lokal per Doppelklick, auf GitHub Pages oder jedem Webspace – ohne einen
+> separaten `css/`-Ordner. (Das war die Ursache, falls die Seite mal „unstyled"
+> aussah: Es wurde nur die HTML ohne `css/` hochgeladen.)
 
-Der Header bindet das Original-Logo automatisch als **`logo.png`** ein (neben den
-HTML-Dateien ablegen). Erkannt werden auch `logo.webp`, `logo.jpg`, `logo.svg`.
-Fehlt die Datei, erscheint ein dezenter Schriftzug-Fallback – nie ein kaputtes Bild.
+## Deployment
 
-## Deployen / Hochladen
+### GitHub Pages
+1. Dateien ins Repo pushen (oder per Web-Upload reinziehen).
+2. **Settings → Pages → Branch: `main` / Root** → Save.
+3. Nach ~1 Min ist die Seite live. Bei Updates hart neu laden (Cmd+Shift+R).
 
-GitHub Pages, Vercel, Netlify, IONOS, Cloudflare Pages: die Dateien ins Root legen.
-Kein Build-Command. Bei GitHub: ZIP entpacken → die Dateien (nicht die .zip) ins Repo
-hochladen → Commit. Danach ggf. Hard-Reload (⌘⇧R) gegen den Browser-Cache.
+### Beliebiger Webspace / Static-Host
+Einfach `index.html` (für die Link-Vorschau zusätzlich den `assets/`-Ordner)
+hochladen. Kein Build nötig.
 
-## Farben & Fonts
+## Bewerbungsformular
 
-- Primär-Blau `#1f86cc` · Dunkles Navy `#0c1b2e` · Text `#16222e`
-- Fonts: **Sora** (Headlines) · **Inter** (Fließtext) – via Google Fonts
+Der Versand läuft über **Web3Forms** (Access-Key + Logik am Ende der `index.html`).
+Die Empfänger-Adresse ist im Web3Forms-Dashboard hinterlegt; für eine eigene
+Empfänger-Adresse dort einen eigenen Key anlegen und eintragen. Im Formular wählt
+die/der Bewerber:in die Stelle aus; die „Auf diese Stelle bewerben"-Buttons setzen
+sie automatisch vor.
 
-## Noch offen
+## Vor dem Livegang bestätigen
 
-- **Fotos:** Dateien daneben legen, dann erscheinen sie automatisch:
-  `team.jpg`, `historie.jpg`, `fertigung.jpg`, `laser.jpg`, `reinigung.jpg`,
-  `oberflaeche.jpg`, `qualitaet-1.jpg`, `qualitaet-2.jpg`.
-- **Kontaktformular:** in `index.html` im `<script>`-Block die Konstante
-  `WEB3FORMS_ACCESS_KEY` setzen (kostenloser Key über web3forms.com mit
-  `kontakt@kopp-feinmechanik.de`). Ohne Key öffnet der Button ersatzweise das E-Mail-Programm.
+- **Impressum-/Datenschutz-Links** im Footer (zeigen aktuell auf
+  `steuerberater-leichtle.de/impressum` bzw. `/datenschutz`).
+- **Gehalt / Eintritt** je nach finalem Stellenprofil.
+
+## Bearbeiten
+
+Die Seite wird aus einer getrennten Quelle (HTML + CSS) generiert und zu dieser
+Einzeldatei gebündelt. Für Änderungen an Texten/Design bitte bei Ländle Digital
+melden – wir liefern eine aktualisierte `index.html`.
