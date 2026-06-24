@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KOPP Feinmechanik GmbH · Präzisionsdrehteile im µ-Bereich | Schramberg</title>
+<meta name="description" content="KOPP Feinmechanik fertigt hochpräzise Drehteile und Baugruppen im µ-Bereich für Medizintechnik, Maschinenbau, Lasertechnik, Optische Industrie und Elektrotechnik. Präzisionsfertigung seit 1945 aus Schramberg-Sulgen." />
+<meta name="keywords" content="Feinmechanik, Präzisionsdrehteile, Drehteile, CNC Drehen, Langdrehautomaten, Kurzdrehautomaten, Laserbeschriftung, Teilereinigung, Schramberg, Feindrehteile, Medizintechnik, Maschinenbau" />
+<meta name="author" content="KOPP Feinmechanik GmbH" />
+<link rel="canonical" href="https://www.kopp-feinmechanik.de/" />
+
+<!-- Geo-Tags für lokale Suche -->
+<meta name="geo.region" content="DE-BW" />
+<meta name="geo.placename" content="Schramberg-Sulgen" />
+
+<!-- Open Graph / WhatsApp -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.kopp-feinmechanik.de/" />
+<meta property="og:title" content="KOPP Feinmechanik GmbH · Präzisionsteile im µ-Bereich" />
+<meta property="og:description" content="Hochpräzise Drehteile und Baugruppen für anspruchsvolle Industrien. Präzisionsfertigung seit 1945." />
+<meta property="og:image" content="https://www.kopp-feinmechanik.de/og-image.jpg" />
+<meta property="og:locale" content="de_DE" />
+<meta property="og:site_name" content="KOPP Feinmechanik GmbH" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+/* =========================================================
+   KOPP Feinmechanik – Stylesheet
+   Farben & Stil an der bestehenden OnePage orientiert.
+   ========================================================= */
+
+:root{
+  --blue:#1f86cc;          /* Primär-Blau (Buttons, Akzente) */
+  --blue-600:#1a73b0;
+  --blue-700:#155d92;
+  --blue-050:#eaf4fb;
+  --navy:#0c1b2e;          /* Dunkles Navy (Sektionen, FAQ-Toggle) */
+  --navy-700:#13263c;
+  --ink:#16222e;           /* Fließtext / Headlines */
+  --muted:#5c6b7a;         /* Sekundärtext */
+  --line:#e3eaf0;
+  --mist:#f3f7fa;          /* helle Sektion */
+  --white:#fff;
+
+  --radius:16px;
+  --radius-sm:10px;
+  --shadow:0 10px 30px rgba(15,40,70,.08);
+  --shadow-lg:0 24px 60px rgba(15,40,70,.14);
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.65;
+  font-size:17px;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;color:var(--ink);letter-spacing:-.01em}
+
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.center{text-align:center}
+.nowrap{white-space:nowrap}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5em;
+  font-family:"Sora",sans-serif;font-weight:600;font-size:16px;
+  padding:14px 26px;border-radius:var(--radius-sm);border:1.5px solid transparent;
+  cursor:pointer;transition:transform .15s var(--ease),background .2s,box-shadow .2s,color .2s;
+  text-align:center;line-height:1.2;
+}
+.btn--primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px rgba(31,134,204,.28)}
+.btn--primary:hover{background:var(--blue-600);transform:translateY(-2px);box-shadow:0 12px 26px rgba(31,134,204,.36)}
+.btn--light{background:#fff;color:var(--ink);border-color:#fff}
+.btn--light:hover{background:transparent;color:#fff;border-color:rgba(255,255,255,.7);transform:translateY(-2px)}
+.btn--lg{padding:16px 34px;font-size:17px}
+.btn--block{width:100%}
+
+/* ---------- Header / Nav ---------- */
+.site-header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.92);backdrop-filter:saturate(180%) blur(10px);
+  border-bottom:1px solid transparent;transition:box-shadow .25s,border-color .25s;
+}
+.site-header.is-stuck{box-shadow:0 6px 24px rgba(15,40,70,.07);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:74px}
+.nav__links{display:flex;align-items:center;gap:30px}
+.nav__links a{font-family:"Sora",sans-serif;font-weight:500;color:var(--ink);font-size:15.5px;transition:color .2s}
+.nav__links a:hover{color:var(--blue)}
+.nav__cta{color:#fff !important}
+.nav__toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;padding:10px;cursor:pointer}
+.nav__toggle span{width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.25s var(--ease)}
+.nav__toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.nav__toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav__toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* ---------- Brand / Logo (nachgebaut) ---------- */
+.brand{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1;color:var(--blue)}
+.brand__img{height:48px;width:auto;display:block}
+.brand__fallback{display:none;flex-direction:column;align-items:flex-start;line-height:1}
+.brand__word{display:flex;align-items:center;font-family:"Sora",sans-serif;font-weight:800;font-size:30px;letter-spacing:.02em;color:var(--blue)}
+.brand__ring{width:.92em;height:.92em;margin:0 .01em;color:var(--blue)}
+.brand__sub{font-family:"Sora",sans-serif;font-weight:600;font-size:11px;letter-spacing:.42em;color:var(--blue);margin-top:3px;padding-left:2px}
+.brand--light,.brand--light .brand__word,.brand--light .brand__sub,.brand--light .brand__ring{color:#fff}
+
+/* ---------- Headlines: Akzent-Unterstrich (wie Original) ---------- */
+.h-accent{
+  font-size:clamp(28px,4.4vw,46px);font-weight:700;
+  text-decoration:underline;text-decoration-color:var(--blue);
+  text-decoration-thickness:4px;text-underline-offset:10px;
+  margin-bottom:18px;
+}
+.h-accent--light{color:#fff;text-decoration-color:var(--blue)}
+.h-accent.center{margin-left:auto;margin-right:auto}
+
+/* ---------- Marker-Highlight (wie Original) ---------- */
+.mark{
+  display:inline;background:var(--blue);color:#fff;
+  padding:.06em .3em;border-radius:5px;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone;
+  font-weight:700;line-height:1.5;
+}
+.mark--lg{font-size:1.05em}
+
+/* ---------- Sektionen ---------- */
+.section{padding:84px 0}
+.section--mist{background:var(--mist)}
+.section--navy{background:var(--navy);color:#e8eef4}
+.section--navy p{color:#b9c6d3}
+.section__head{max-width:720px;margin:0 auto 52px}
+.lead{font-size:19px;color:var(--muted)}
+.lead.center{margin-left:auto;margin-right:auto}
+.section__cta{margin-top:48px}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;color:#fff;overflow:hidden;isolation:isolate}
+.hero__bg{
+  position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(100% 80% at 78% 8%, rgba(31,134,204,.20), transparent 55%),
+    linear-gradient(135deg,#0c1c30 0%, #143a5e 55%, #155d92 100%);
+  background-color:#0e2640;
+}
+/* FOTO OPTIONAL: hier ein Gebäudefoto via background-image ergänzen. */
+.hero__inner{padding:64px 24px 72px}
+.hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.hero__title{font-size:clamp(34px,5.6vw,62px);font-weight:800;letter-spacing:-.02em;color:#fff}
+.hero__title{position:relative;display:inline-block}
+.hero__title::after{content:"";display:block;width:170px;height:5px;background:var(--blue);border-radius:3px;margin-top:22px}
+.hero__lead{font-size:19px;color:#cdd8e3;margin:0 0 28px}
+.hero__actions{display:flex;flex-wrap:wrap;gap:14px}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:62px}
+.stat{
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--radius);padding:24px 22px;backdrop-filter:blur(6px);
+  transition:transform .25s var(--ease),background .25s;
+}
+.stat:hover{transform:translateY(-4px);background:rgba(255,255,255,.11)}
+.stat__icon{
+  width:38px;height:38px;border-radius:9px;background:var(--blue);color:#fff;
+  display:grid;place-items:center;font-size:13px;margin-bottom:16px;
+}
+.stat__num{font-family:"Sora",sans-serif;font-weight:700;font-size:23px;color:#fff;line-height:1.2}
+.stat__label{font-size:14px;color:#aebccb;margin-top:8px}
+
+/* ---------- Split (Über uns) ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.split__text p{color:var(--muted);margin:0 0 16px}
+.split__text p:first-of-type{font-size:19px;color:var(--ink)}
+
+/* ---------- Media / Platzhalter ---------- */
+.media{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--mist);box-shadow:var(--shadow)}
+.media img{width:100%;height:100%;object-fit:cover}
+.media__hint{display:none}
+.media--portrait{aspect-ratio:4/3}
+.media--tall{aspect-ratio:3/4}
+/* Platzhalter-Optik, wenn kein Bild vorhanden */
+.media--ph{background:var(--mist);border:1px solid var(--line);box-shadow:none;min-height:220px}
+.media--ph::before{
+  content:"";position:absolute;left:50%;top:calc(50% - 10px);transform:translate(-50%,-50%);
+  width:44px;height:36px;border:2px solid #c2d1de;border-radius:8px;
+}
+.media--ph .media__hint{
+  display:block;position:absolute;left:0;right:0;bottom:16px;text-align:center;
+  color:#93a3b1;font-size:12.5px;letter-spacing:.03em;font-family:"Sora",sans-serif;
+}
+.media--vintage.media--ph{background:var(--mist)}
+
+/* ---------- Features (3 Spalten) ---------- */
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:64px}
+.feature,.point{background:#fff}
+.feature__icon{
+  width:52px;height:52px;border-radius:12px;background:var(--blue);color:#fff;
+  display:grid;place-items:center;margin-bottom:18px;
+}
+.feature__icon svg,.contact__ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.feature h3,.point h3{font-size:21px;margin-bottom:10px}
+.feature p,.point p{color:var(--muted);margin:0}
+
+/* ---------- Heritage ---------- */
+.heritage{display:grid;grid-template-columns:1fr 1fr 1fr;gap:42px;align-items:start}
+.heritage__story p{color:var(--muted);margin:14px 0}
+.heritage__story h2{margin-bottom:22px}
+.heritage__media .media{aspect-ratio:4/5;align-self:start}
+.heritage__points{display:flex;flex-direction:column;gap:34px}
+.point .feature__icon{width:46px;height:46px;border-radius:11px;margin-bottom:14px}
+.quote{margin:30px 0 0;padding:24px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+.section--mist .quote{background:#fff}
+.quote__avatar{
+  display:inline-grid;place-items:center;width:52px;height:52px;border-radius:50%;
+  background:var(--navy);color:#fff;font-family:"Sora",sans-serif;font-weight:700;font-size:18px;margin-bottom:14px;
+}
+.quote blockquote{margin:0;font-family:"Sora",sans-serif;font-weight:600;font-size:20px;line-height:1.4;color:var(--ink)}
+.quote figcaption{margin-top:12px;color:var(--muted);font-size:15px}
+
+/* ---------- Leistungs-Karten ---------- */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card-svc{
+  display:flex;flex-direction:column;gap:12px;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 28px;box-shadow:var(--shadow);
+  transition:transform .25s var(--ease),box-shadow .25s,border-color .25s;
+}
+.card-svc:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:#cfe0ee}
+.card-svc__icon{
+  width:52px;height:52px;border-radius:12px;background:var(--blue-050);color:var(--blue);
+  display:grid;place-items:center;margin-bottom:6px;
+}
+.card-svc__icon svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.card-svc h3{color:var(--ink);font-size:22px}
+.card-svc p{color:var(--muted);margin:0;font-size:15.5px}
+
+/* ---------- Leistungs-Detail (alternierend) ---------- */
+.svc-detail{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:70px;scroll-margin-top:100px}
+.svc-detail--reverse .svc-detail__media{order:-1}
+.svc-detail__text p{color:var(--muted);margin:0 0 14px}
+.svc-detail__text h3{font-size:clamp(24px,3vw,32px);margin-bottom:22px}
+.svc-detail__media .media{aspect-ratio:4/3}
+
+/* ---------- Qualität ---------- */
+.quality{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.quality__media{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.quality__media .media{aspect-ratio:3/4}
+.checks{list-style:none;padding:0;margin:26px 0 0;display:flex;flex-direction:column;gap:16px}
+.checks li{display:flex;align-items:center;gap:14px;font-family:"Sora",sans-serif;font-weight:500;font-size:18px}
+.checks__box{
+  flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:var(--blue);color:#fff;
+  display:grid;place-items:center;font-size:16px;font-weight:700;
+}
+
+/* ---------- FAQ ---------- */
+.faq{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:start}
+.faq__aside h2{margin-bottom:34px}
+.faq__cta{margin-top:40px}
+.faq__cta p{font-family:"Sora",sans-serif;font-weight:600;color:var(--ink);margin:0 0 16px;font-size:18px}
+.faq__list{display:flex;flex-direction:column;gap:14px}
+.acc{background:var(--blue);border-radius:12px;overflow:hidden;color:#fff;transition:background .2s}
+.acc summary{
+  list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:20px 22px;font-family:"Sora",sans-serif;font-weight:600;font-size:17.5px;
+}
+.acc summary::-webkit-details-marker{display:none}
+.acc__ico{
+  flex:0 0 auto;width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;
+  display:grid;place-items:center;font-size:24px;font-weight:400;transition:transform .25s var(--ease);
+}
+.acc[open] .acc__ico{transform:rotate(45deg)}
+.acc__body{padding:0 22px 22px}
+.acc__body p{margin:0;color:#eaf2fb;font-family:"Inter",sans-serif;font-weight:400;font-size:16px;line-height:1.6}
+
+/* ---------- Kontakt ---------- */
+.contact{display:grid;grid-template-columns:1fr 1.05fr;gap:54px;align-items:start}
+.contact__intro p{color:#b9c6d3;font-size:18px}
+.contact__info{list-style:none;padding:0;margin:30px 0 0;display:flex;flex-direction:column;gap:20px}
+.contact__info li{display:flex;align-items:flex-start;gap:16px;color:#e8eef4;line-height:1.5}
+.contact__info a{color:#e8eef4}
+.contact__info a:hover{color:#fff;text-decoration:underline}
+.contact__ico{flex:0 0 auto;width:42px;height:42px;border-radius:10px;background:rgba(255,255,255,.1);color:#7fc0ef;display:grid;place-items:center}
+
+.contact__form{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-lg)}
+.hp{position:absolute;left:-9999px;opacity:0}
+.field{margin-bottom:16px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field label{display:block;font-family:"Sora",sans-serif;font-weight:500;font-size:14px;color:var(--ink);margin-bottom:7px}
+.field input,.field textarea{
+  width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:var(--radius-sm);
+  font-family:"Inter",sans-serif;font-size:16px;color:var(--ink);background:#fcfdfe;transition:border-color .2s,box-shadow .2s;
+}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(31,134,204,.15)}
+.field textarea{resize:vertical}
+.consent{display:flex;gap:12px;align-items:flex-start;margin:8px 0 20px;font-size:14px;color:var(--muted);line-height:1.5}
+.consent input{margin-top:3px;width:18px;height:18px;flex:0 0 auto;accent-color:var(--blue)}
+.consent a{color:var(--blue);text-decoration:underline}
+.form-note{text-align:center;font-size:14px;color:var(--muted);margin:16px 0 0}
+.form-note a{color:var(--blue)}
+.contact__form-success{text-align:center;padding:30px 10px}
+.contact__form-success-icon{width:64px;height:64px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:32px;margin:0 auto 18px}
+.contact__form-success h3{font-size:24px;margin-bottom:8px}
+.contact__form-success p{color:var(--muted)}
+
+/* ---------- Footer ---------- */
+.site-footer{background:#08131f;color:#9fb0bf;padding:64px 0 0}
+.footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;padding-bottom:46px}
+.footer__brand p{margin:18px 0 0;max-width:280px;font-size:15px}
+.footer__col h4{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.footer__col a,.footer__col p{display:block;color:#9fb0bf;margin:0 0 9px;font-size:15px;transition:color .2s}
+.footer__col a:hover{color:#fff}
+.footer__bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:22px;padding-bottom:28px}
+.footer__bottom p{margin:0;font-size:14px;color:#7a8a99}
+
+/* ---------- Rechtliche Seiten ---------- */
+.legal{padding:64px 0 80px}
+.legal__head{max-width:820px;margin:0 auto 40px}
+.legal__head h1{font-size:clamp(32px,5vw,48px);text-decoration:underline;text-decoration-color:var(--blue);text-decoration-thickness:4px;text-underline-offset:10px}
+.legal__body{max-width:820px;margin:0 auto}
+.legal__body h2{font-size:23px;margin:38px 0 12px;color:var(--ink)}
+.legal__body h3{font-size:18px;margin:26px 0 8px;color:var(--blue-700)}
+.legal__body p{color:#3f4d5a;margin:0 0 14px}
+.legal__body ul{color:#3f4d5a;margin:0 0 14px;padding-left:22px}
+.legal__body li{margin-bottom:6px}
+.legal__body a{color:var(--blue);text-decoration:underline;word-break:break-word}
+.legal__back{display:inline-flex;align-items:center;gap:8px;margin-bottom:8px;color:var(--blue);font-family:"Sora",sans-serif;font-weight:600}
+.legal address{font-style:normal}
+
+/* ---------- Sticky CTA (mobil) ---------- */
+.sticky-cta{
+  position:fixed;left:50%;bottom:18px;transform:translateX(-50%) translateY(140%);
+  z-index:55;background:var(--blue);color:#fff;font-family:"Sora",sans-serif;font-weight:600;
+  padding:14px 30px;border-radius:50px;box-shadow:0 12px 30px rgba(31,134,204,.45);
+  transition:transform .3s var(--ease);
+}
+.sticky-cta.show{transform:translateX(-50%) translateY(0)}
+
+/* ---------- Reveal-Animation ---------- */
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+[data-reveal].in{opacity:1;transform:none}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width:980px){
+  .hero__grid{grid-template-columns:1fr;gap:22px;align-items:start}
+  .stats{grid-template-columns:1fr 1fr}
+  .split,.quality,.contact,.faq{grid-template-columns:1fr;gap:34px}
+  .heritage{grid-template-columns:1fr;gap:34px}
+  .heritage__media .media{aspect-ratio:16/10}
+  .features,.cards{grid-template-columns:1fr 1fr}
+  .footer__grid{grid-template-columns:1fr 1fr}
+}
+
+@media (max-width:760px){
+  body{font-size:16px}
+  .section{padding:60px 0}
+  .nav__toggle{display:flex}
+  .nav__links{
+    position:fixed;inset:74px 0 auto 0;flex-direction:column;align-items:stretch;gap:0;
+    background:#fff;border-bottom:1px solid var(--line);padding:8px 24px 22px;
+    transform:translateY(-120%);transition:transform .3s var(--ease);box-shadow:var(--shadow);
+  }
+  .nav__links.open{transform:translateY(0)}
+  .nav__links a{padding:14px 4px;border-bottom:1px solid var(--line);font-size:17px}
+  .nav__cta{margin-top:12px;border-bottom:0 !important}
+  .nav__links .btn{padding:14px 26px}
+  .hero__inner{padding:48px 24px 56px}
+  .hero__title::after{margin-top:18px}
+  .features,.cards,.stats,.field-row,.quality__media{grid-template-columns:1fr}
+  .svc-detail,.svc-detail--reverse{grid-template-columns:1fr;gap:26px}
+  .svc-detail--reverse .svc-detail__media{order:0}
+  .footer__grid{grid-template-columns:1fr}
+  .faq__aside h2{margin-bottom:22px}
+  .acc summary{font-size:16px;padding:17px 18px}
+  .contact__form{padding:22px}
+  .sticky-cta{padding:13px 26px;font-size:15px}
+}
+
+@media (min-width:761px){.sticky-cta{display:none}}
+
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto !important}
+  [data-reveal]{opacity:1;transform:none;transition:none}
+  .btn,.stat,.card-svc{transition:none}
+}
+
+  </style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxZjg2Y2MiLz4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjUiLz4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjUiLz4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPgo=" />
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxZjg2Y2MiLz4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjUiLz4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjUiLz4KICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjMyIiByPSIzIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPgo=" />
+
+<!-- Schema.org LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Manufacturer",
+  "name": "KOPP Feinmechanik GmbH",
+  "description": "Hersteller von Präzisionsdrehteilen und komplexen Dreh-Frästeilen im µ-Bereich.",
+  "url": "https://www.kopp-feinmechanik.de",
+  "telephone": "+49742299260",
+  "email": "kontakt@kopp-feinmechanik.de",
+  "foundingDate": "1945",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Otto-Hahn-Straße 18",
+    "postalCode": "78713",
+    "addressLocality": "Schramberg-Sulgen",
+    "addressCountry": "DE"
+  }
+}
+</script>
+</head>
+<body id="top">
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="KOPP Feinmechanik – Startseite">
+      <img class="brand__img" src="logo.png" data-src="logo.png,logo.webp,logo.jpg,logo.svg" alt="KOPP Feinmechanik" />
+      <span class="brand__fallback" aria-hidden="true">
+        <span class="brand__word">K<svg class="brand__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="2.2" fill="currentColor"/></svg>PP</span>
+        <span class="brand__sub">FEINMECHANIK</span>
+      </span>
+    </a>
+
+    <nav class="nav__links" id="navLinks" aria-label="Hauptnavigation">
+      <a href="#leistungen">Unsere Leistungen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt" class="btn btn--primary nav__cta">Kostenlose Anfrage stellen</a>
+    </nav>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="start">
+  <div class="hero__bg" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__grid">
+      <div class="hero__col">
+        <h1 class="hero__title">Präzisionsteile im <span class="nowrap">µ-Bereich</span><br>für anspruchsvolle Industrien</h1>
+      </div>
+      <div class="hero__col hero__col--text">
+        <p class="hero__lead">Wir fertigen hochpräzise Drehteile und Baugruppen für Medizintechnik, Maschinenbau, Lasertechnik, Optische Industrie, Elektrotechnik und weitere industrielle Hightech-Branchen.</p>
+        <div class="hero__actions">
+          <a href="#kontakt" class="btn btn--primary">Projekt anfragen</a>
+          <a href="#leistungen" class="btn btn--light">Fertigungsmöglichkeiten ansehen</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats" data-reveal>
+      <div class="stat">
+        <div class="stat__icon" aria-hidden="true">▲</div>
+        <div class="stat__num"><span class="count" data-target="80" data-suffix="+">0</span> Jahre Erfahrung</div>
+        <div class="stat__label">Präzisionsfertigung seit 1945</div>
+      </div>
+      <div class="stat">
+        <div class="stat__icon" aria-hidden="true">▲</div>
+        <div class="stat__num">µ-genaue Toleranzen</div>
+        <div class="stat__label">Fertigung im Mikrometerbereich</div>
+      </div>
+      <div class="stat">
+        <div class="stat__icon" aria-hidden="true">▲</div>
+        <div class="stat__num">1mm&nbsp;–&nbsp;42mm</div>
+        <div class="stat__label">Durchmesserbereich der Drehteile</div>
+      </div>
+      <div class="stat">
+        <div class="stat__icon" aria-hidden="true">▲</div>
+        <div class="stat__num">100&nbsp;–&nbsp;100.000</div>
+        <div class="stat__label">Flexible Serienfertigung</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÜBER UNS / INTRO ============ -->
+<section class="section" id="ueber-uns">
+  <div class="container">
+    <div class="split">
+      <div class="split__text" data-reveal>
+        <h2 class="h-accent">Präzision, auf die sich Industrie verlässt</h2>
+        <p>Wir sind spezialisiert auf die wirtschaftliche Fertigung von Präzisionsdrehteilen und komplexen Dreh-Frästeilen.</p>
+        <p>Mit modernen Kurz- und Langdrehautomaten fertigen wir Bauteile vom Prototyp bis zur Serie – zuverlässig und mit höchster Genauigkeit.</p>
+        <p>Unsere Kunden kommen aus Branchen mit höchsten Anforderungen an Qualität und Maßhaltigkeit.</p>
+      </div>
+      <div class="split__media" data-reveal>
+        <!-- BILD ERSETZEN: Team / Geschäftsführer -->
+        <div class="media media--portrait" data-img="team">
+          <img src="team.jpg" alt="Das Team von KOPP Feinmechanik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();">
+          <span class="media__hint">Bild: Team</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="features">
+      <article class="feature" data-reveal>
+        <div class="feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2v3m0 14v3M2 12h3m14 0h3M5 5l2 2m10 10l2 2M19 5l-2 2M7 17l-2 2"/><circle cx="12" cy="12" r="3.5"/></svg>
+        </div>
+        <h3><span class="mark">Moderne CNC-Fertigung</span></h3>
+        <p>Kurz- und Langdrehautomaten führender Hersteller.</p>
+      </article>
+      <article class="feature" data-reveal>
+        <div class="feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 7l8-4 8 4-8 4-8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
+        </div>
+        <h3><span class="mark">Breites Materialspektrum</span></h3>
+        <p>Edelstahl, Kupfer, Messing, Kunststoff &amp; Aluminium.</p>
+      </article>
+      <article class="feature" data-reveal>
+        <div class="feature__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+        </div>
+        <h3><span class="mark">Sichere Qualität</span></h3>
+        <p>Mehrstufige Kontrolle jedes Fertigungsschrittes.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAMILIENUNTERNEHMEN / HERITAGE ============ -->
+<section class="section section--mist" id="historie">
+  <div class="container">
+    <div class="heritage">
+      <div class="heritage__story" data-reveal>
+        <h2><span class="mark mark--lg">Ein Familienunternehmen seit 1945</span></h2>
+        <p>Seit vier Generationen stehen wir für Präzision, Zuverlässigkeit und partnerschaftliche Zusammenarbeit mit Industrieunternehmen.</p>
+        <p>Von einfachen Drehteilen bis zu komplexen Präzisionsbauteilen entwickeln und fertigen wir Lösungen, die exakt auf die Anforderungen unserer Kunden abgestimmt sind.</p>
+        <p>Viele unserer Kunden begleiten wir seit Jahrzehnten.</p>
+
+        <figure class="quote">
+          <!-- BILD ERSETZEN: Porträt Benjamin Kopp -->
+          <span class="quote__avatar" data-img="benjamin" aria-hidden="true">BK</span>
+          <blockquote>„Präzision entsteht nicht durch Maschinen allein.<br>Sie entsteht durch Erfahrung.“</blockquote>
+          <figcaption>Benjamin Kopp, Geschäftsführer</figcaption>
+        </figure>
+      </div>
+
+      <div class="heritage__media" data-reveal>
+        <!-- BILD ERSETZEN: Historische Werkstattaufnahme -->
+        <div class="media media--tall media--vintage" data-img="historie">
+          <img src="historie.jpg" alt="Historische Aufnahme der Werkstatt von KOPP Feinmechanik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();">
+          <span class="media__hint">Bild: Historie</span>
+        </div>
+      </div>
+
+      <div class="heritage__points" data-reveal>
+        <article class="point">
+          <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V9m5 10V5m5 14v-7m5 7V3"/></svg></div>
+          <h3><span class="mark">Technologische Präzision</span></h3>
+          <p>Unsere Fertigung basiert auf modernen CNC-Kurz- und Langdrehautomaten, die höchste Maßgenauigkeit und stabile Prozesse ermöglichen.</p>
+        </article>
+        <article class="point">
+          <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 11l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg></div>
+          <h3><span class="mark">Geprüfte Qualität</span></h3>
+          <p>Jedes Bauteil durchläuft definierte Prüfprozesse, um sicherzustellen, dass alle technischen Anforderungen zuverlässig erfüllt werden.</p>
+        </article>
+        <article class="point">
+          <div class="feature__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6 8-6s8 2 8 6"/></svg></div>
+          <h3><span class="mark">Erfahrung in anspruchsvollen Branchen</span></h3>
+          <p>Unsere Bauteile kommen in Industrien zum Einsatz, in denen Präzision entscheidend ist – unter anderem im Maschinenbau, in der Medizintechnik und in der Optikerbranche.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEISTUNGEN ============ -->
+<section class="section" id="leistungen">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <h2 class="h-accent center">Unsere Leistungen</h2>
+      <p class="lead center">Von der ersten Zeichnung bis zum fertigen Bauteil bieten wir alle Fertigungsschritte aus einer Hand – präzise, effizient und zuverlässig.</p>
+    </div>
+
+    <div class="cards">
+      <a class="card-svc" href="#fertigung" data-reveal>
+        <span class="card-svc__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/></svg></span>
+        <h3>Präzisionsdrehteile</h3>
+        <p>Fertigung von Kleinstdrehteilen und komplexen Bauteilen im Durchmesserbereich von 1 bis 42 mm.</p>
+      </a>
+      <a class="card-svc" href="#oberflaeche" data-reveal>
+        <span class="card-svc__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg></span>
+        <h3>Oberflächenbearbeitung</h3>
+        <p>Entgraten, Gleitschleifen, Polieren, Laserbeschriftung sowie chemische und galvanische Oberflächenbehandlungen (durch qualifizierte Partner).</p>
+      </a>
+      <a class="card-svc" href="#reinigung" data-reveal>
+        <span class="card-svc__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3c4 5 6 8 6 11a6 6 0 01-12 0c0-3 2-6 6-11z"/></svg></span>
+        <h3>Teilereinigung</h3>
+        <p>Ultraschall- und Vollvakuumtechnik entfernen zuverlässig Öl und Späne.</p>
+      </a>
+    </div>
+
+    <!-- Detaillierte Leistungsbeschreibungen -->
+    <div class="svc-detail" id="fertigung" data-reveal>
+      <div class="svc-detail__text">
+        <h3><span class="mark mark--lg">Fertigung</span></h3>
+        <p>Wir können für Sie Präzisionsdrehteile jeder Art fertigen. Dafür stehen uns leistungsfähige und hochgenaue Kurz- und Langdrehautomaten führender deutscher, schweizer und japanischer Hersteller zur Verfügung.</p>
+        <p>Heute fertigen wir komplexe Präzisionsteile von der Stange in Komplettbearbeitung – kurzfristig und ohne Nacharbeit.</p>
+        <p>Wir fertigen vom einfachen Massendrehteil bis zum hochkomplexen Dreh-Frästeil die gesamte Palette im Abmessungsbereich von 1 mm bis 42 mm und Teilelängen von 1 mm bis 200 mm.</p>
+        <p>Unser Schwerpunkt liegt in der wirtschaftlichen Fertigung von kleinen Feindrehteilen mit bis zu 32 mm Durchmesser in Fertigungslosgrößen von 100 Stück bis zu 100.000 Stück.</p>
+      </div>
+      <div class="svc-detail__media">
+        <div class="media" data-img="fertigung"><img src="fertigung.jpg" alt="Präzisionsfertigung bei KOPP Feinmechanik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Fertigung</span></div>
+      </div>
+    </div>
+
+    <div class="svc-detail svc-detail--reverse" id="laser" data-reveal>
+      <div class="svc-detail__text">
+        <h3><span class="mark mark--lg">Laserbeschriftung &amp; Gravuren</span></h3>
+        <p>Mit modernster Lasertechnologie sind wir in der Lage, alle Arten von Metalloberflächen professionell zu beschriften.</p>
+        <p>Unser Leistungsspektrum umfasst das Anlassen, Gravieren und Strukturieren von Metallteilen – ganz nach Ihren individuellen Anforderungen.</p>
+      </div>
+      <div class="svc-detail__media">
+        <div class="media" data-img="laser"><img src="laser.jpg" alt="Laserbeschriftung von Metallteilen" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Laser</span></div>
+      </div>
+    </div>
+
+    <div class="svc-detail" id="reinigung" data-reveal>
+      <div class="svc-detail__text">
+        <h3><span class="mark mark--lg">Teilereinigung</span></h3>
+        <p>Zur Teilereinigung setzen wir einen effizienten Reinigungsautomaten ein. Dieser reinigt mit Ultraschall und Vollvakuumtechnik, sodass es uns möglich ist, Öl und Späne vollkommen zu entfernen.</p>
+        <p>Es handelt sich um eine sehr umweltfreundliche Technologie: Durch die integrierte kontinuierliche Destillation entsteht nur ein geringer Verbrauch an Reinigungsmedium und es fällt kein Sondermüll an.</p>
+      </div>
+      <div class="svc-detail__media">
+        <div class="media" data-img="reinigung"><img src="reinigung.jpg" alt="Teilereinigung mit Ultraschall- und Vollvakuumtechnik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Reinigung</span></div>
+      </div>
+    </div>
+
+    <div class="svc-detail svc-detail--reverse" id="oberflaeche" data-reveal>
+      <div class="svc-detail__text">
+        <h3><span class="mark mark--lg">Oberflächenbehandlung</span></h3>
+        <p>Wir legen großen Wert auf eine gute Oberflächenbeschaffenheit. Es ist für uns selbstverständlich, dass die Teile gratfrei gefertigt werden.</p>
+        <p>In Bezug auf alle Arten von Sonder-, Oberflächen- und Wärmebehandlungen stehen uns bewährte und vertrauensvolle Unternehmen als Partner zur Verfügung.</p>
+        <p>In allen Bereichen, in denen es darum geht, Oberflächen wirtschaftlich zu entgraten, zu schleifen, zu glätten oder zu polieren, haben wir die geeigneten Maschinen im Haus.</p>
+      </div>
+      <div class="svc-detail__media">
+        <div class="media" data-img="oberflaeche"><img src="oberflaeche.jpg" alt="Oberflächenbehandlung und Messtechnik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Oberfläche</span></div>
+      </div>
+    </div>
+
+    <div class="section__cta center" data-reveal>
+      <a href="#kontakt" class="btn btn--primary btn--lg">Projekt anfragen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUALITÄT ============ -->
+<section class="section section--mist" id="qualitaet">
+  <div class="container">
+    <div class="quality">
+      <div class="quality__text" data-reveal>
+        <h2 class="h-accent">Qualität ohne Kompromisse</h2>
+        <p>Alle unsere Partner sind zertifiziert und halten sich an strenge internationale Qualitätsstandards, was zuverlässige Leistung und langfristige Haltbarkeit gewährleistet.</p>
+        <ul class="checks">
+          <li><span class="checks__box" aria-hidden="true">✓</span> Fertigung im µ-Bereich</li>
+          <li><span class="checks__box" aria-hidden="true">✓</span> Mehrstufige Qualitätskontrolle</li>
+          <li><span class="checks__box" aria-hidden="true">✓</span> Erfahrung mit anspruchsvollen Werkstoffen</li>
+        </ul>
+      </div>
+      <div class="quality__media" data-reveal>
+        <div class="media" data-img="quali-1"><img src="qualitaet-1.jpg" alt="Qualitätskontrolle unter dem Mikroskop" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Messlabor</span></div>
+        <div class="media" data-img="quali-2"><img src="qualitaet-2.jpg" alt="Vermessung eines Präzisionsbauteils" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Messtechnik</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="faq">
+      <div class="faq__aside" data-reveal>
+        <h2 class="h-accent">Häufige Fragen zur Fertigung</h2>
+        <div class="faq__cta">
+          <p>Haben Sie die gewünschte Antwort nicht gefunden?</p>
+          <a href="#kontakt" class="btn btn--primary">Hier unverbindlich Kontakt aufnehmen</a>
+        </div>
+      </div>
+
+      <div class="faq__list" data-reveal>
+        <details class="acc">
+          <summary>1. Welche Bauteile können gefertigt werden?<span class="acc__ico" aria-hidden="true">+</span></summary>
+          <div class="acc__body"><p>Wir fertigen Präzisionsdrehteile und komplexe Dreh-Frästeile – vom einfachen Massendrehteil bis zum hochkomplexen Dreh-Frästeil. Der Abmessungsbereich reicht von 1 mm bis 42 mm Durchmesser bei Teilelängen von 1 mm bis 200 mm.</p></div>
+        </details>
+        <details class="acc">
+          <summary>2. Welche Materialien können verarbeitet werden?<span class="acc__ico" aria-hidden="true">+</span></summary>
+          <div class="acc__body"><p>Wir verarbeiten unter anderem Edelstahl, Kupfer, Messing, Aluminium und Kunststoff. Auch anspruchsvolle Werkstoffe sind durch unsere langjährige Erfahrung kein Problem.</p></div>
+        </details>
+        <details class="acc">
+          <summary>3. Sind auch Kleinserien oder Prototypen möglich?<span class="acc__ico" aria-hidden="true">+</span></summary>
+          <div class="acc__body"><p>Ja. Wir fertigen vom Prototyp über Kleinserien bis zur Großserie – in Fertigungslosgrößen von 100 bis 100.000 Stück.</p></div>
+        </details>
+        <details class="acc">
+          <summary>4. Welche Toleranzen sind erreichbar?<span class="acc__ico" aria-hidden="true">+</span></summary>
+          <div class="acc__body"><p>Wir fertigen im µ-Bereich (Mikrometerbereich) und erreichen engste Toleranzen für anspruchsvollste Anwendungen.</p></div>
+        </details>
+        <details class="acc">
+          <summary>5. Ist Unterstützung bei der Optimierung von Bauteilen möglich?<span class="acc__ico" aria-hidden="true">+</span></summary>
+          <div class="acc__body"><p>Gerne. Profitieren Sie von unserer langjährigen Fertigungserfahrung – wir beraten Sie zur fertigungsgerechten und wirtschaftlichen Optimierung Ihrer Bauteile.</p></div>
+        </details>
+        <details class="acc">
+          <summary>6. Wie läuft eine Anfrage ab?<span class="acc__ico" aria-hidden="true">+</span></summary>
+          <div class="acc__body"><p>Senden Sie uns Ihre Zeichnung oder Ihre Anforderungen über unser Kontaktformular. Wir prüfen Ihre Anfrage und melden uns kurzfristig mit einem unverbindlichen Angebot zurück.</p></div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONTAKT ============ -->
+<section class="section section--navy" id="kontakt">
+  <div class="container">
+    <div class="contact">
+      <div class="contact__intro" data-reveal>
+        <h2 class="h-accent h-accent--light">Projekt anfragen</h2>
+        <p>Senden Sie uns Ihre Anfrage – gerne mit Zeichnung oder einer kurzen Beschreibung Ihres Bauteils. Wir melden uns kurzfristig mit einem unverbindlichen Angebot bei Ihnen zurück.</p>
+
+        <ul class="contact__info">
+          <li>
+            <span class="contact__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            <span>KOPP Feinmechanik GmbH<br>Otto-Hahn-Straße 18<br>78713 Schramberg-Sulgen</span>
+          </li>
+          <li>
+            <span class="contact__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 5c0 8 7 15 15 15a2 2 0 002-2v-2.5a1 1 0 00-.8-1l-3.6-.8a1 1 0 00-1 .4l-1 1.3a12 12 0 01-5.6-5.6l1.3-1a1 1 0 00.4-1l-.8-3.6a1 1 0 00-1-.8H6a2 2 0 00-2 2z"/></svg>
+            </span>
+            <a href="tel:+49742299260">+49 7422 9926-0</a>
+          </li>
+          <li>
+            <span class="contact__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </span>
+            <a href="mailto:kontakt@kopp-feinmechanik.de">kontakt@kopp-feinmechanik.de</a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact__form" id="contactForm" novalidate data-reveal>
+        <!-- Web3Forms: Access-Key in main.js eintragen (WEB3FORMS_ACCESS_KEY) -->
+        <input type="hidden" name="subject" value="Neue Anfrage über kopp-feinmechanik.de" />
+        <input type="hidden" name="from_name" value="KOPP Feinmechanik Website" />
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" />
+
+        <div class="field">
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="firma">Unternehmen</label>
+            <input id="firma" name="firma" type="text" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="telefon">Telefon</label>
+            <input id="telefon" name="telefon" type="tel" autocomplete="tel" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">E-Mail *</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="nachricht">Ihre Anfrage *</label>
+          <textarea id="nachricht" name="nachricht" rows="5" required placeholder="Stückzahl, Material, Toleranzen, gewünschter Liefertermin …"></textarea>
+        </div>
+        <label class="consent">
+          <input type="checkbox" name="datenschutz" required />
+          <span>Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage zu.</span>
+        </label>
+        <button type="submit" class="btn btn--primary btn--lg btn--block">Anfrage senden</button>
+        <p class="form-note">Oder schreiben Sie direkt an <a href="mailto:kontakt@kopp-feinmechanik.de">kontakt@kopp-feinmechanik.de</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <span class="brand brand--light">
+        <span class="brand__word">K<svg class="brand__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="2.2" fill="currentColor"/></svg>PP</span>
+        <span class="brand__sub">FEINMECHANIK</span>
+      </span>
+      <p>Präzisionsdrehteile und komplexe Dreh-Frästeile im µ-Bereich – seit 1945.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Kontakt</h4>
+      <p>Otto-Hahn-Straße 18<br>78713 Schramberg-Sulgen</p>
+      <p><a href="tel:+49742299260">+49 7422 9926-0</a><br><a href="mailto:kontakt@kopp-feinmechanik.de">kontakt@kopp-feinmechanik.de</a></p>
+    </div>
+    <div class="footer__col">
+      <h4>Navigation</h4>
+      <a href="#leistungen">Unsere Leistungen</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontakt">Anfrage stellen</a>
+    </div>
+    <div class="footer__col">
+      <h4>Rechtliches</h4>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutzerklärung</a>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>© <span id="year">2025</span> KOPP Feinmechanik GmbH. Alle Rechte vorbehalten.</p>
+  </div>
+</footer>
+
+<a href="#kontakt" class="sticky-cta">Anfrage stellen</a>
+
+<script>
+/* =========================================================
+   KOPP Feinmechanik – main.js
+   ========================================================= */
+(function () {
+  'use strict';
+
+  /* ---- aktuelles Jahr ---- */
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  /* ---- Logo laden (Original logo.png), sonst Schriftzug-Fallback ---- */
+  document.querySelectorAll('.brand__img').forEach(function (img) {
+    var cands = (img.getAttribute('data-src') || '').split(',');
+    var i = 1; /* src-Attribut entspricht cands[0] und lädt bereits */
+    img.addEventListener('error', function () {
+      if (i < cands.length) { img.src = cands[i++].trim(); return; }
+      img.style.display = 'none';
+      var fb = img.parentElement.querySelector('.brand__fallback');
+      if (fb) fb.style.display = 'inline-flex';
+    });
+  });
+
+  /* ---- Mobile-Navigation ---- */
+  var toggle = document.getElementById('navToggle');
+  var links = document.getElementById('navLinks');
+  if (toggle && links) {
+    toggle.addEventListener('click', function () {
+      var open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    });
+    links.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        links.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  /* ---- Header-Schatten + Sticky-CTA bei Scroll ---- */
+  var header = document.getElementById('header');
+  var cta = document.querySelector('.sticky-cta');
+  function onScroll() {
+    var sc = window.pageYOffset || document.documentElement.scrollTop;
+    if (header) header.classList.toggle('is-stuck', sc > 8);
+    if (cta) cta.classList.toggle('show', sc > 700);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ---- Reveal-on-scroll ---- */
+  var reveal = document.querySelectorAll('[data-reveal]');
+  if ('IntersectionObserver' in window && reveal.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveal.forEach(function (el) { io.observe(el); });
+  } else {
+    reveal.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* ---- Zähler-Animation (z.B. 80+) ---- */
+  var counters = document.querySelectorAll('.count');
+  if ('IntersectionObserver' in window && counters.length) {
+    var cObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var el = e.target;
+        var target = parseInt(el.getAttribute('data-target'), 10) || 0;
+        var suffix = el.getAttribute('data-suffix') || '';
+        var start = null, dur = 1100;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          el.textContent = Math.floor(p * target) + (p === 1 ? suffix : '');
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        cObs.unobserve(el);
+      });
+    }, { threshold: 0.6 });
+    counters.forEach(function (el) { cObs.observe(el); });
+  }
+
+  /* ---- FAQ: immer nur eine Frage offen ---- */
+  var accs = document.querySelectorAll('.acc');
+  accs.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (d.open) {
+        accs.forEach(function (o) { if (o !== d) o.open = false; });
+      }
+    });
+  });
+
+  /* ---- Kontaktformular (Web3Forms) ----
+     Einrichtung:
+       1. Auf https://web3forms.com mit kontakt@kopp-feinmechanik.de einen
+          kostenlosen Access-Key per E-Mail anfordern.
+       2. Den Key unten in WEB3FORMS_ACCESS_KEY einsetzen – fertig.
+     Solange der Platzhalter steht, öffnet das Formular ersatzweise das
+     E-Mail-Programm (mailto), es geht also keine Anfrage verloren. */
+  var WEB3FORMS_ACCESS_KEY = 'HIER-WEB3FORMS-ACCESS-KEY-EINSETZEN';
+  var FALLBACK_MAIL = 'kontakt@kopp-feinmechanik.de';
+
+  var form = document.getElementById('contactForm');
+  if (!form) return;
+
+  function escapeHtml(s) {
+    return String(s || '').replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    var btn = form.querySelector('button[type="submit"]');
+    var originalLabel = btn ? btn.innerHTML : '';
+    var fd = new FormData(form);
+    var data = Object.fromEntries(fd.entries());
+
+    /* Fallback ohne gültigen Key: E-Mail-Programm öffnen */
+    if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY.indexOf('HIER-') === 0) {
+      var body = 'Name: ' + (data.name || '') + '\nUnternehmen: ' + (data.firma || '') +
+        '\nTelefon: ' + (data.telefon || '') + '\nE-Mail: ' + (data.email || '') +
+        '\n\nAnfrage:\n' + (data.nachricht || '');
+      window.location.href = 'mailto:' + FALLBACK_MAIL +
+        '?subject=' + encodeURIComponent('Anfrage über kopp-feinmechanik.de') +
+        '&body=' + encodeURIComponent(body);
+      return;
+    }
+
+    if (btn) { btn.disabled = true; btn.innerHTML = 'Wird gesendet …'; }
+    fd.append('access_key', WEB3FORMS_ACCESS_KEY);
+
+    try {
+      var res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: fd
+      });
+      var json = await res.json().catch(function () { return {}; });
+      if (!res.ok || json.success === false) throw new Error(json.message || 'Submit failed');
+
+      form.innerHTML =
+        '<div class="contact__form-success">' +
+        '<div class="contact__form-success-icon">✓</div>' +
+        '<h3>Vielen Dank, ' + escapeHtml(data.name) + '!</h3>' +
+        '<p>Ihre Anfrage ist bei uns eingegangen. Wir melden uns kurzfristig unter <b>' +
+        escapeHtml(data.email) + '</b> bei Ihnen.</p></div>';
+    } catch (err) {
+      if (btn) { btn.disabled = false; btn.innerHTML = originalLabel; }
+      alert('Beim Senden ist etwas schiefgegangen. Bitte schreiben Sie uns direkt an ' +
+        FALLBACK_MAIL + ' oder rufen Sie +49 7422 9926-0 an.');
+    }
+  });
+})();
+
+</script>
+</body>
+</html>
