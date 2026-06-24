@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://www.kopp-feinmechanik.de/" />
 <meta property="og:title" content="KOPP Feinmechanik GmbH · Präzisionsteile im µ-Bereich" />
 <meta property="og:description" content="Hochpräzise Drehteile und Baugruppen für anspruchsvolle Industrien. Präzisionsfertigung seit 1945." />
-<meta property="og:image" content="https://www.kopp-feinmechanik.de/og-image.jpg" />
+<meta property="og:image" content="https://www.kopp-feinmechanik.de/logo.png" />
 <meta property="og:locale" content="de_DE" />
 <meta property="og:site_name" content="KOPP Feinmechanik GmbH" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -110,6 +110,8 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 .brand{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1;color:var(--blue)}
 .brand__img{height:48px;width:auto;display:block}
 .brand__fallback{display:none;flex-direction:column;align-items:flex-start;line-height:1}
+.brand--chip{background:#fff;padding:9px 14px;border-radius:12px;align-self:flex-start}
+.brand--chip .brand__img{height:38px}
 .brand__word{display:flex;align-items:center;font-family:"Sora",sans-serif;font-weight:800;font-size:30px;letter-spacing:.02em;color:var(--blue)}
 .brand__ring{width:.92em;height:.92em;margin:0 .01em;color:var(--blue)}
 .brand__sub{font-family:"Sora",sans-serif;font-weight:600;font-size:11px;letter-spacing:.42em;color:var(--blue);margin-top:3px;padding-left:2px}
@@ -345,7 +347,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 .sticky-cta.show{transform:translateX(-50%) translateY(0)}
 
 /* ---------- Reveal-Animation ---------- */
-[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+[data-reveal]{opacity:1;transform:none}
 [data-reveal].in{opacity:1;transform:none}
 
 /* =========================================================
@@ -425,7 +427,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 <header class="site-header" id="header">
   <div class="container nav">
     <a class="brand" href="#top" aria-label="KOPP Feinmechanik – Startseite">
-      <img class="brand__img" src="logo.png" data-src="logo.png,logo.webp,logo.jpg,logo.svg" alt="KOPP Feinmechanik" />
+      <img class="brand__img" src="md2x.png" data-src="md2x.png,logo.png,logo.webp,logo.jpg,logo.svg" alt="KOPP Feinmechanik" />
       <span class="brand__fallback" aria-hidden="true">
         <span class="brand__word">K<svg class="brand__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="2.2" fill="currentColor"/></svg>PP</span>
         <span class="brand__sub">FEINMECHANIK</span>
@@ -465,7 +467,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
     <div class="stats" data-reveal>
       <div class="stat">
         <div class="stat__icon" aria-hidden="true">▲</div>
-        <div class="stat__num"><span class="count" data-target="80" data-suffix="+">0</span> Jahre Erfahrung</div>
+        <div class="stat__num">80+ Jahre Erfahrung</div>
         <div class="stat__label">Präzisionsfertigung seit 1945</div>
       </div>
       <div class="stat">
@@ -499,8 +501,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
       </div>
       <div class="split__media" data-reveal>
         <!-- BILD ERSETZEN: Team / Geschäftsführer -->
-        <div class="media media--portrait" data-img="team">
-          <img src="team.jpg" alt="Das Team von KOPP Feinmechanik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();">
+        <div class="media media--portrait media--ph" data-img="team">
           <span class="media__hint">Bild: Team</span>
         </div>
       </div>
@@ -552,8 +553,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 
       <div class="heritage__media" data-reveal>
         <!-- BILD ERSETZEN: Historische Werkstattaufnahme -->
-        <div class="media media--tall media--vintage" data-img="historie">
-          <img src="historie.jpg" alt="Historische Aufnahme der Werkstatt von KOPP Feinmechanik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();">
+        <div class="media media--tall media--vintage media--ph" data-img="historie">
           <span class="media__hint">Bild: Historie</span>
         </div>
       </div>
@@ -615,7 +615,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
         <p>Unser Schwerpunkt liegt in der wirtschaftlichen Fertigung von kleinen Feindrehteilen mit bis zu 32 mm Durchmesser in Fertigungslosgrößen von 100 Stück bis zu 100.000 Stück.</p>
       </div>
       <div class="svc-detail__media">
-        <div class="media" data-img="fertigung"><img src="fertigung.jpg" alt="Präzisionsfertigung bei KOPP Feinmechanik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Fertigung</span></div>
+        <div class="media media--ph" data-img="fertigung"><span class="media__hint">Bild: Fertigung</span></div>
       </div>
     </div>
 
@@ -626,7 +626,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
         <p>Unser Leistungsspektrum umfasst das Anlassen, Gravieren und Strukturieren von Metallteilen – ganz nach Ihren individuellen Anforderungen.</p>
       </div>
       <div class="svc-detail__media">
-        <div class="media" data-img="laser"><img src="laser.jpg" alt="Laserbeschriftung von Metallteilen" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Laser</span></div>
+        <div class="media media--ph" data-img="laser"><span class="media__hint">Bild: Laser</span></div>
       </div>
     </div>
 
@@ -637,7 +637,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
         <p>Es handelt sich um eine sehr umweltfreundliche Technologie: Durch die integrierte kontinuierliche Destillation entsteht nur ein geringer Verbrauch an Reinigungsmedium und es fällt kein Sondermüll an.</p>
       </div>
       <div class="svc-detail__media">
-        <div class="media" data-img="reinigung"><img src="reinigung.jpg" alt="Teilereinigung mit Ultraschall- und Vollvakuumtechnik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Reinigung</span></div>
+        <div class="media media--ph" data-img="reinigung"><span class="media__hint">Bild: Reinigung</span></div>
       </div>
     </div>
 
@@ -649,7 +649,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
         <p>In allen Bereichen, in denen es darum geht, Oberflächen wirtschaftlich zu entgraten, zu schleifen, zu glätten oder zu polieren, haben wir die geeigneten Maschinen im Haus.</p>
       </div>
       <div class="svc-detail__media">
-        <div class="media" data-img="oberflaeche"><img src="oberflaeche.jpg" alt="Oberflächenbehandlung und Messtechnik" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Oberfläche</span></div>
+        <div class="media media--ph" data-img="oberflaeche"><span class="media__hint">Bild: Oberfläche</span></div>
       </div>
     </div>
 
@@ -673,8 +673,8 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
         </ul>
       </div>
       <div class="quality__media" data-reveal>
-        <div class="media" data-img="quali-1"><img src="qualitaet-1.jpg" alt="Qualitätskontrolle unter dem Mikroskop" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Messlabor</span></div>
-        <div class="media" data-img="quali-2"><img src="qualitaet-2.jpg" alt="Vermessung eines Präzisionsbauteils" loading="lazy" onerror="this.closest('.media').classList.add('media--ph');this.remove();"><span class="media__hint">Bild: Messtechnik</span></div>
+        <div class="media media--ph" data-img="quali-1"><span class="media__hint">Bild: Messlabor</span></div>
+        <div class="media media--ph" data-img="quali-2"><span class="media__hint">Bild: Messtechnik</span></div>
       </div>
     </div>
   </div>
@@ -795,9 +795,12 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 <footer class="site-footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <span class="brand brand--light">
-        <span class="brand__word">K<svg class="brand__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="2.2" fill="currentColor"/></svg>PP</span>
-        <span class="brand__sub">FEINMECHANIK</span>
+      <span class="brand brand--chip">
+        <img class="brand__img" src="md2x.png" data-src="md2x.png,logo.png,logo.webp,logo.jpg,logo.svg" alt="KOPP Feinmechanik" />
+        <span class="brand__fallback" aria-hidden="true">
+          <span class="brand__word">K<svg class="brand__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="2.2" fill="currentColor"/></svg>PP</span>
+          <span class="brand__sub">FEINMECHANIK</span>
+        </span>
       </span>
       <p>Präzisionsdrehteile und komplexe Dreh-Frästeile im µ-Bereich – seit 1945.</p>
     </div>
