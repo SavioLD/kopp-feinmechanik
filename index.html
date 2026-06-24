@@ -108,7 +108,8 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 
 /* ---------- Brand / Logo (nachgebaut) ---------- */
 .brand{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1;color:var(--blue)}
-.brand__img{height:54px;width:auto}
+.brand__img{height:48px;width:auto;display:block}
+.brand__fallback{display:none;flex-direction:column;align-items:flex-start;line-height:1}
 .brand__word{display:flex;align-items:center;font-family:"Sora",sans-serif;font-weight:800;font-size:30px;letter-spacing:.02em;color:var(--blue)}
 .brand__ring{width:.92em;height:.92em;margin:0 .01em;color:var(--blue)}
 .brand__sub{font-family:"Sora",sans-serif;font-weight:600;font-size:11px;letter-spacing:.42em;color:var(--blue);margin-top:3px;padding-left:2px}
@@ -424,10 +425,11 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 <header class="site-header" id="header">
   <div class="container nav">
     <a class="brand" href="#top" aria-label="KOPP Feinmechanik – Startseite">
-      <!-- Platzhalter-Logo (nachgebaut). Zum Ersetzen: logo.png ablegen und diesen
-           <a>-Inhalt durch <img src="logo.png" alt="KOPP Feinmechanik" class="brand__img"> ersetzen. -->
-      <span class="brand__word">K<svg class="brand__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="2.2" fill="currentColor"/></svg>PP</span>
-      <span class="brand__sub">FEINMECHANIK</span>
+      <img class="brand__img" src="logo.png" data-src="logo.png,logo.webp,logo.jpg,logo.svg" alt="KOPP Feinmechanik" />
+      <span class="brand__fallback" aria-hidden="true">
+        <span class="brand__word">K<svg class="brand__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="2.2" fill="currentColor"/></svg>PP</span>
+        <span class="brand__sub">FEINMECHANIK</span>
+      </span>
     </a>
 
     <nav class="nav__links" id="navLinks" aria-label="Hauptnavigation">
@@ -452,7 +454,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
         <h1 class="hero__title">Präzisionsteile im <span class="nowrap">µ-Bereich</span><br>für anspruchsvolle Industrien</h1>
       </div>
       <div class="hero__col hero__col--text">
-        <p class="hero__lead">KOPP Feinmechanik fertigt hochpräzise Drehteile und Baugruppen für Medizintechnik, Maschinenbau, Lasertechnik, Optische Industrie, Elektrotechnik und weitere industrielle Hightech-Branchen.</p>
+        <p class="hero__lead">Wir fertigen hochpräzise Drehteile und Baugruppen für Medizintechnik, Maschinenbau, Lasertechnik, Optische Industrie, Elektrotechnik und weitere industrielle Hightech-Branchen.</p>
         <div class="hero__actions">
           <a href="#kontakt" class="btn btn--primary">Projekt anfragen</a>
           <a href="#leistungen" class="btn btn--light">Fertigungsmöglichkeiten ansehen</a>
@@ -491,7 +493,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
     <div class="split">
       <div class="split__text" data-reveal>
         <h2 class="h-accent">Präzision, auf die sich Industrie verlässt</h2>
-        <p>KOPP Feinmechanik ist spezialisiert auf die wirtschaftliche Fertigung von Präzisionsdrehteilen und komplexen Dreh-Frästeilen.</p>
+        <p>Wir sind spezialisiert auf die wirtschaftliche Fertigung von Präzisionsdrehteilen und komplexen Dreh-Frästeilen.</p>
         <p>Mit modernen Kurz- und Langdrehautomaten fertigen wir Bauteile vom Prototyp bis zur Serie – zuverlässig und mit höchster Genauigkeit.</p>
         <p>Unsere Kunden kommen aus Branchen mit höchsten Anforderungen an Qualität und Maßhaltigkeit.</p>
       </div>
@@ -536,7 +538,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
     <div class="heritage">
       <div class="heritage__story" data-reveal>
         <h2><span class="mark mark--lg">Ein Familienunternehmen seit 1945</span></h2>
-        <p>Seit vier Generationen steht KOPP Feinmechanik für Präzision, Zuverlässigkeit und partnerschaftliche Zusammenarbeit mit Industrieunternehmen.</p>
+        <p>Seit vier Generationen stehen wir für Präzision, Zuverlässigkeit und partnerschaftliche Zusammenarbeit mit Industrieunternehmen.</p>
         <p>Von einfachen Drehteilen bis zu komplexen Präzisionsbauteilen entwickeln und fertigen wir Lösungen, die exakt auf die Anforderungen unserer Kunden abgestimmt sind.</p>
         <p>Viele unserer Kunden begleiten wir seit Jahrzehnten.</p>
 
@@ -683,7 +685,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
   <div class="container">
     <div class="faq">
       <div class="faq__aside" data-reveal>
-        <h2 class="h-accent">Häufige Fragen zur Fertigung bei KOPP Feinmechanik</h2>
+        <h2 class="h-accent">Häufige Fragen zur Fertigung</h2>
         <div class="faq__cta">
           <p>Haben Sie die gewünschte Antwort nicht gefunden?</p>
           <a href="#kontakt" class="btn btn--primary">Hier unverbindlich Kontakt aufnehmen</a>
@@ -692,7 +694,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 
       <div class="faq__list" data-reveal>
         <details class="acc">
-          <summary>1. Welche Bauteile können bei KOPP Feinmechanik gefertigt werden?<span class="acc__ico" aria-hidden="true">+</span></summary>
+          <summary>1. Welche Bauteile können gefertigt werden?<span class="acc__ico" aria-hidden="true">+</span></summary>
           <div class="acc__body"><p>Wir fertigen Präzisionsdrehteile und komplexe Dreh-Frästeile – vom einfachen Massendrehteil bis zum hochkomplexen Dreh-Frästeil. Der Abmessungsbereich reicht von 1 mm bis 42 mm Durchmesser bei Teilelängen von 1 mm bis 200 mm.</p></div>
         </details>
         <details class="acc">
@@ -708,7 +710,7 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
           <div class="acc__body"><p>Wir fertigen im µ-Bereich (Mikrometerbereich) und erreichen engste Toleranzen für anspruchsvollste Anwendungen.</p></div>
         </details>
         <details class="acc">
-          <summary>5. Unterstützt KOPP Feinmechanik bei der Optimierung von Bauteilen?<span class="acc__ico" aria-hidden="true">+</span></summary>
+          <summary>5. Ist Unterstützung bei der Optimierung von Bauteilen möglich?<span class="acc__ico" aria-hidden="true">+</span></summary>
           <div class="acc__body"><p>Gerne. Profitieren Sie von unserer langjährigen Fertigungserfahrung – wir beraten Sie zur fertigungsgerechten und wirtschaftlichen Optimierung Ihrer Bauteile.</p></div>
         </details>
         <details class="acc">
@@ -834,6 +836,18 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
   /* ---- aktuelles Jahr ---- */
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
+
+  /* ---- Logo laden (Original logo.png), sonst Schriftzug-Fallback ---- */
+  document.querySelectorAll('.brand__img').forEach(function (img) {
+    var cands = (img.getAttribute('data-src') || '').split(',');
+    var i = 1; /* src-Attribut entspricht cands[0] und lädt bereits */
+    img.addEventListener('error', function () {
+      if (i < cands.length) { img.src = cands[i++].trim(); return; }
+      img.style.display = 'none';
+      var fb = img.parentElement.querySelector('.brand__fallback');
+      if (fb) fb.style.display = 'inline-flex';
+    });
+  });
 
   /* ---- Mobile-Navigation ---- */
   var toggle = document.getElementById('navToggle');

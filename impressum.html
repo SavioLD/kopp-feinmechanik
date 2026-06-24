@@ -91,7 +91,8 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 
 /* ---------- Brand / Logo (nachgebaut) ---------- */
 .brand{display:inline-flex;flex-direction:column;align-items:flex-start;line-height:1;color:var(--blue)}
-.brand__img{height:54px;width:auto}
+.brand__img{height:48px;width:auto;display:block}
+.brand__fallback{display:none;flex-direction:column;align-items:flex-start;line-height:1}
 .brand__word{display:flex;align-items:center;font-family:"Sora",sans-serif;font-weight:800;font-size:30px;letter-spacing:.02em;color:var(--blue)}
 .brand__ring{width:.92em;height:.92em;margin:0 .01em;color:var(--blue)}
 .brand__sub{font-family:"Sora",sans-serif;font-weight:600;font-size:11px;letter-spacing:.42em;color:var(--blue);margin-top:3px;padding-left:2px}
@@ -384,8 +385,11 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
 <header class="site-header is-stuck">
   <div class="container nav">
     <a class="brand" href="index.html" aria-label="KOPP Feinmechanik – Startseite">
-      <span class="brand__word">K<svg class="brand__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="2.2" fill="currentColor"/></svg>PP</span>
-      <span class="brand__sub">FEINMECHANIK</span>
+      <img class="brand__img" src="logo.png" data-src="logo.png,logo.webp,logo.jpg,logo.svg" alt="KOPP Feinmechanik" />
+      <span class="brand__fallback" aria-hidden="true">
+        <span class="brand__word">K<svg class="brand__ring" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="3.2"/><circle cx="16" cy="16" r="2.2" fill="currentColor"/></svg>PP</span>
+        <span class="brand__sub">FEINMECHANIK</span>
+      </span>
     </a>
     <nav class="nav__links" id="navLinks" aria-label="Hauptnavigation">
       <a href="index.html#leistungen">Unsere Leistungen</a>
@@ -474,6 +478,18 @@ h1,h2,h3,h4{font-family:"Sora",system-ui,sans-serif;line-height:1.15;margin:0;co
   /* ---- aktuelles Jahr ---- */
   var y = document.getElementById('year');
   if (y) y.textContent = new Date().getFullYear();
+
+  /* ---- Logo laden (Original logo.png), sonst Schriftzug-Fallback ---- */
+  document.querySelectorAll('.brand__img').forEach(function (img) {
+    var cands = (img.getAttribute('data-src') || '').split(',');
+    var i = 1; /* src-Attribut entspricht cands[0] und lädt bereits */
+    img.addEventListener('error', function () {
+      if (i < cands.length) { img.src = cands[i++].trim(); return; }
+      img.style.display = 'none';
+      var fb = img.parentElement.querySelector('.brand__fallback');
+      if (fb) fb.style.display = 'inline-flex';
+    });
+  });
 
   /* ---- Mobile-Navigation ---- */
   var toggle = document.getElementById('navToggle');
